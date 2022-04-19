@@ -12,6 +12,10 @@ body {
     font-family: 'DM Sans', sans-serif;
 }
 
+.stroke {
+    position: relative;
+}
+
 nav, footer {
     display: flex;
     flex-direction: column;
@@ -30,7 +34,11 @@ nav li, footer li{
     display: inline-block;
 }
 
-nav ul li a, footer ul li a {
+.navMenu {
+    transition: 1s ease-in;
+}
+
+.navMenu li a, footer ul li a {
     font-size: 1.6rem;
     cursor: pointer;
     font-family: 'DM Sans', sans-serif;
@@ -41,17 +49,17 @@ nav ul li a, footer ul li a {
     text-transform: uppercase;
     margin: 0 10px;
     color: #F7EBD9;
-  }
+}
 
-nav ul li a,
-nav ul li a:after,
-nav ul li a:before, footer ul li a,
+.navMenu li a,
+.navMenu li a:after,
+.navMenu li a:before, footer ul li a,
 footer ul li a:after,
 footer ul li a:before{
     transition: all .5s;
 }
 
-nav ul li a:hover, footer ul li a:hover  {
+.navMenu li a:hover, footer ul li a:hover  {
     color:  #c67c4d;
 }
 
@@ -96,6 +104,23 @@ nav.fill ul li a:hover:after, footer.fill ul li a:hover:after  {
   -webkit-animation: fill 1s forwards;
   -moz-animation: fill 1s forwards;
   opacity: 1;
+}
+/* Hamburger */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    align-self: flex-end;
+    margin-right: 50px;
+}
+
+.bar {
+    display: block;
+    width: 40px;
+    height: 5px;
+    margin: 8px auto;
+    -webkit-transition: all 300ms ease-in-out;
+    background-color: white;
+    z-index: 5;
 }
 
 header {
@@ -431,6 +456,43 @@ fieldset {
         width: 100%;
         padding: 20px;
         background-color: transparent;
+    }
+    .hamburger {
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(13px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-13px) rotate(-45deg);
+    }
+
+    .navMenu {
+        position: relative;
+        /* top: -1000px; */
+        left: -100%;
+        flex-direction: column;
+        gap: 0;
+        background-color: #3E3734;
+        width: 100%;
+        text-align: center;
+        transition: 300ms ;
+        display: flex;
+        height: 0px;
+
+    }
+
+    .navMenu li {
+        margin: 16px 0;
+    }
+
+    .navMenu.active  {
+        /* top: 100%; */
+        left: 0;
+        height: 100%;
     }
   }
   @media only screen and (max-width: 500px) {

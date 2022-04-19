@@ -9,6 +9,9 @@ let searchType = 'by_city=';
 let pageNum = 1;
 let lastPage = false;
 
+const hamburger = document.querySelector('.hamburger');
+const navMenu =  document.querySelector('.navMenu');
+
 //functions loops and objects
 function removeAllChildNodes(parent) {
     while (parent.firstChild) {
@@ -148,5 +151,8 @@ nextBtn.addEventListener('click', () => {
     document.getElementById('pageNumber').textContent = pageNum
 }); 
 
-
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active')
+    navMenu.classList.toggle('active')
+});
 
