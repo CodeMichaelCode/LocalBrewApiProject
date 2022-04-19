@@ -139,7 +139,6 @@ prevBtn.addEventListener('click', () => {
     nextBtn.classList.remove('disabled')
     searchObj.newSearch(searchObj.minusPageNum())
     document.getElementById('pageNumber').textContent = pageNum
-    // console.log(pageNum)   
 }); 
 
 nextBtn.addEventListener('click', () => {
@@ -147,7 +146,7 @@ nextBtn.addEventListener('click', () => {
     prevBtn.classList.remove('disabled')
     searchObj.newSearch()
     document.getElementById('pageNumber').textContent = pageNum
-    // console.log(pageNum)
 }); 
+
 
 
