@@ -12,10 +12,6 @@ body {
     font-family: 'DM Sans', sans-serif;
 }
 
-.stroke {
-    position: relative;
-}
-
 nav, footer {
     display: flex;
     flex-direction: column;
@@ -32,6 +28,10 @@ nav img {
 nav li, footer li{
     list-style: none;
     display: inline-block;
+}
+
+.stroke {
+    position: relative;
 }
 
 .navMenu {
@@ -110,7 +110,7 @@ nav.fill ul li a:hover:after, footer.fill ul li a:hover:after  {
     display: none;
     cursor: pointer;
     align-self: flex-end;
-    margin-right: 50px;
+    z-index: 6;
 }
 
 .bar {
@@ -119,6 +119,7 @@ nav.fill ul li a:hover:after, footer.fill ul li a:hover:after  {
     height: 5px;
     margin: 8px auto;
     -webkit-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
     background-color: white;
     z-index: 5;
 }
@@ -366,7 +367,6 @@ fieldset {
     background-color: #232323;
     width: 90%;
     padding: 30px;
-    overflow-y: scroll;
     position: relative;
     margin: 40px auto 40px;
     height: fit-content;
@@ -416,7 +416,6 @@ fieldset {
 
 #searchArea {
     scroll-behavior: smooth;
-    overflow: scroll;
 }
 
 .fa-caret-left:hover, .fa-caret-right:hover {
@@ -451,6 +450,7 @@ fieldset {
     }
     header #bannerImg {
         align-self: flex-start;
+        padding-bottom: 20px;
     }
     .searchResults {
         width: 100%;
@@ -470,18 +470,21 @@ fieldset {
         transform: translateY(-13px) rotate(-45deg);
     }
 
+    nav {
+        padding-bottom: 15px;
+    }
+
     .navMenu {
         position: relative;
-        /* top: -1000px; */
         left: -100%;
         flex-direction: column;
         gap: 0;
         background-color: #3E3734;
         width: 100%;
         text-align: center;
-        transition: 300ms ;
+        transition: 500ms;
         display: flex;
-        height: 0px;
+        height: 0;
 
     }
 
@@ -490,14 +493,16 @@ fieldset {
     }
 
     .navMenu.active  {
-        /* top: 100%; */
         left: 0;
         height: 100%;
+        position: relative;
+        z-index: 4;
+        top: 0;
     }
   }
   @media only screen and (max-width: 500px) {
     header h1 {
-        font-size: 4.5rem;
+        font-size: 5.5rem;
     }
     .switchField {
         flex-direction: row;
