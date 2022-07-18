@@ -20,46 +20,24 @@
             <ul class="navMenu">
                 <li><a href="#">Home</a></li>
                 <li><a href="#searchArea">Search</a></li>
-                <li><a href="#howItWorksSection">How It Works</a></li>
+                <li><a href="#howItWorks">How It Works</a></li>
                 <li><a href="#howItWorksLink">Brewery Legend</a></li>
             </ul>
 
     </nav>
     <header>
-        <div id="intro">
-            <h1>Welcome to TTT!</h1>
-            <p>Are you looking for the nearest local brewey to have a brew with a few of your closest buds. Look no further we'll handle that search for you. </p>
-            <button onclick="location.href='#searchArea'">Look for  brewey</button>
+        <div class="center">
+            <div id="intro">
+                <h1>Welcome to TTT!</h1>
+                <p>Are you looking for the nearest local brewery to have a brew with a few of your closest buds? Look no further we'll handle that search for you.</p>
+                <button onclick="location.href='#searchArea'">Look for  brewey</button>
+            </div>
+            <div id="bannerImg"><img src="./imgs/fred-moon-0yqa0rMCsYk-unsplash.jpg" alt="People toasting"></div>
         </div>
-        <div id="bannerImg"><img src="./imgs/fred-moon-0yqa0rMCsYk-unsplash.jpg" alt="People toasting"></div>
     </header>
     <main>
-        <section id="howItWorks">
-            <div id="howItWorksSection">
-                <h2>How It Works</h2>
-                <ol id="instructions">
-                    <li>&nbsp;Select which search type you want to use.</li>
-                    <li>Enter search text related to search type.</li>
-                    <li>Click the search button.</li>
-                    <li>Cheers! Click <a href="#searchArea" >here</a> to get started!</li>
-                    <img src="./imgs/long-livethe-blob-cheers.gif" alt="beer cheers">
-                </ol>
-            </div>
-            <div id="howItWorksLink">
-                <h3>Brewery Types Legend</h3>
-                <ul>
-                    <li><span>Micro</span> - Most craft breweries. For example, Samual Adams is still considered a micro brewery.</li>
-                    <li><span>Nano</span> - An extremely small brewery which typically only distributes locally.</li>
-                    <li><span>Regional</span> - A regional location of an expanded brewery. Ex. Sierra Nevada's Asheville, NC location.</li>
-                    <li><span>Brewpub</span> - A beer-focused restaurant or restaurant/bar with a brewery on-premise.</li>
-                    <li><span>Planning</span> - A brewery in planning or not yet opened to the public.</li>
-                    <li><span>Contract</span> - A brewery that uses another brewery's equipment.</li>
-                    <li><span>Proprietor</span> - Similar to contract brewing but refers more to a brewery incubator.</li>
-                    <li><span>Closed</span> - A location which has been closed recently.</li>
-                </ul>
-            </div>
-        </section>
         <section class="filterCont" id="searchArea">
+
             <div>
                 <h2>Find Nearby Local Breweries </h2>
                 <fieldset class="switchField">
@@ -85,7 +63,37 @@
                <span id="pageNumber">1</span>
                 <i class="fa-solid fa-caret-right" id="next" onclick="location.href='#searchArea'"></i>
             </div>
+      
+    </section>
+        <section id="howItWorks">
+            <div class="center">
+                <div id="howItWorksSection">
+                    <h2>How It Works</h2>
+                    <ol id="instructions">
+                        <li>&nbsp;Select which search type you want to use.</li>
+                        <li>Enter text related to search type.</li>
+                        <li>Click the <i class="fa-solid fa-magnifying-glass"></i> button.</li>
+                        <li>Cheers! Now check out the results.</li>
+                        <li>Click <a href="#searchArea" >here</a> to get started!</li>
+                        <img src="./imgs/long-livethe-blob-cheers.gif" alt="beer cheers">
+                    </ol>
+                </div>
+                <div id="howItWorksLink">
+                    <h3>Brewery Types Legend</h3>
+                    <ul>
+                        <li><span>Micro</span> - Most craft breweries. For example, Samual Adams is still considered a micro brewery.</li>
+                        <li><span>Nano</span> - An extremely small brewery which typically only distributes locally.</li>
+                        <li><span>Regional</span> - A regional location of an expanded brewery. Ex. Sierra Nevada's Asheville, NC location.</li>
+                        <li><span>Brewpub</span> - A beer-focused restaurant or restaurant/bar with a brewery on-premise.</li>
+                        <li><span>Planning</span> - A brewery in planning or not yet opened to the public.</li>
+                        <li><span>Contract</span> - A brewery that uses another brewery's equipment.</li>
+                        <li><span>Proprietor</span> - Similar to contract brewing but refers more to a brewery incubator.</li>
+                        <li><span>Closed</span> - A location which has been closed recently.</li>
+                    </ul>
+                </div>
+            </div>
         </section>
+        
         <section class="beerGlasses">
             <img src="./imgs/jon-parry-C8eSYwQkwHw-unsplash (1).jpg" alt="">
         </section>

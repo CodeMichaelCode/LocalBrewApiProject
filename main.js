@@ -30,7 +30,6 @@ function addTransitionDelay() {
 
 searchTypes.forEach((item) => {
     item.addEventListener('click', ()  => {
-        console.log(item.value);
         searchType = `${item.value}`
         inputText.value = ''
         return searchType.toLowerCase()
@@ -43,7 +42,6 @@ let searchObj = {
     if(searchedText === '') {
         return
     }
-    console.log(searchedText)
     let appURL = 'https://api.openbrewerydb.org/breweries?per_page=5&';
     let url = `${appURL}${searchType}${searchedText}&page=${pageNum}`
     const searchResults = document.querySelector('.searchResults');
@@ -51,12 +49,12 @@ let searchObj = {
     searchResults.classList.remove('hide');
         fetch(url)
         .then(res => {
-            if(res.ok) {
-                console.log(url)
-                console.log('Get request successful')
-            }else{
-                console.log('Get request unsuccessful')
-            }
+            // if(res.ok) {
+            //     console.log(url)
+            //     console.log('Get request successful')
+            // }else{
+            //     console.log('Get request unsuccessful')
+            // }
             return res
         })
         .then(res => res.json())
@@ -96,7 +94,6 @@ let searchObj = {
             if(pageNum == 1) {
                 prevBtn.classList.add('disabled')
                 nextBtn.classList.remove('disabled')
-                console.log('no negative :P')
             }
 
             if(lastPage && pageNum == 2){
@@ -178,6 +175,5 @@ document.querySelectorAll('.navMenu a').forEach((el) => {
 window.addEventListener('scroll', () => {
     if(hamburger.classList.contains('active')){
         hamburger.click()
-        // console.log('yay')
     }
 })
